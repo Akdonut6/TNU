@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TNU Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="#"><img src="Base TNU Logo.png" alt="Base TNU Logo"></a>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Games</a>
+            <a href="#">News</a>
+            <a href="#">Shop</a>
+            <a href="#">Community</a>
+            <a href="#">Support</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero-section">
+        <video autoplay muted loop>
+            <source src="trailer_rough_draft.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>THE NEXT UPDATE</h1>
+            <p>Enter a grand game where anything is possible.</p>
+            <a href="#" class="cta-button">Play Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Games Section -->
+    <section class="character-set">
+        <h2>Characters</h2>
+        <div class="characters">
+            <div class="character-card">
+                <img src="MOONSHADOW.png" alt="MoonShadow">
+                <h3>MoonShadow</h3>
+                <p>After escaping the facility he was created in, he seeks to change the world.</p>
+            </div>
+            <div class="character-card">
+                <img src="MEN IN SUITS.png" alt="Men in Suits">
+                <h3>Men in Suits</h3>
+                <p>THE MAN IN THE SUIT</p>
+            </div>
+            <div class="character-card">
+                <h3>##Coming Soon##</h3>
+                <p>A mystery awaits.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 The Next Update.</p>
+    </footer>
+
+    <script>
+        // JavaScript to change the background images every 3 seconds
+        const heroSection = document.getElementById('hero-section');
+        const images = [
+            'https://via.placeholder.com/1920x1080/ff7f7f?text=EA+Sports+Update+1',
+            'https://via.placeholder.com/1920x1080/7fffd4?text=EA+Sports+Update+2',
+            'https://via.placeholder.com/1920x1080/87ceeb?text=EA+Sports+Update+3',
+        ];
+        let currentImageIndex = 0;
+
+        function changeBackgroundImage() {
+            heroSection.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+        }
+
+        setInterval(changeBackgroundImage, 3000);
+        changeBackgroundImage();  // Set the initial image
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.container h2 {
+    margin-right: 30px;
+}
+.container a {
+    margin: 20px;
+}
+.newswiper-container {
+    margin-right: 20px;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    background-color: #111;
+}
+
+.newswiper-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.newswiper-slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #222;
+}
+
+.newswiper-slide h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.newswiper-slide p {
+    color: #ccc;
+}
+
+.newswiper-button-prev,
+.newswiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 24px;
+    user-select: none;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.newswiper-button-prev:hover,
+.newswiper-button-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.newswiper-button-prev {
+    left: 20px;
+}
+
+.newswiper-button-next {
+    right: 20px;
+}
+
+.newswiper-pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.newswiper-pagination-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.newswiper-pagination-dot.active {
+    background-color: #fff;
+    transform: scale(1.2);
+}
